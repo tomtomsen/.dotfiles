@@ -1,4 +1,13 @@
 set nocompatible         " get rid of Vi compatibility mode. SET FIRST!
+filetype off
+
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+    Plugin 'VundleVim/Vundle.vim'
+    Plugin 'https://github.com/jeffkreeftmeijer/vim-numbertoggle.git'
+    Plugin 'https://github.com/kien/ctrlp.vim.git'
+    Plugin 'https://github.com/tpope/vim-surround.git'
+call vundle#end()
 
 filetype plugin indent on " filetype detection[ON] plugin[ON] indent[ON]
 
@@ -47,3 +56,4 @@ set smarttab              " use tabs at the start of a line, spaces elsewhere
 set nowrap                " don't wrap text
 
 cmap w!! w !sudo tee % > /dev/null
+
