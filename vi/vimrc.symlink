@@ -7,6 +7,7 @@ call vundle#begin()
     Plugin 'https://github.com/jeffkreeftmeijer/vim-numbertoggle.git'
     Plugin 'https://github.com/kien/ctrlp.vim.git'
     Plugin 'https://github.com/tpope/vim-surround.git'
+    Plugin 'ntpeters/vim-better-whitespace'
 call vundle#end()
 
 filetype plugin indent on " filetype detection[ON] plugin[ON] indent[ON]
@@ -17,6 +18,8 @@ autocmd FileType make setlocal noexpandtab
 autocmd FileType ruby setlocal sw=2 ts=2 sts=2
 " In PHP files
 autocmd FileType php setlocal sw=4 ts=4 sts=4
+" Trim Trailing Whitespaces
+autocmd BufWritePre * StripWhitespace
 
 " Enable omnicompletion (to use, hold Ctrl+X then Ctrl+O while in Insert mode.
 set ofu=syntaxcomplete#Complete
